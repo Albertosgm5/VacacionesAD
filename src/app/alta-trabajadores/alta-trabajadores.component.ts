@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TrabajadorComponent } from '../trabajador/trabajador.component';
+import { Trabajador } from '../Trabajador';
 
 @Component({
   selector: 'app-alta-trabajadores',
@@ -8,11 +8,20 @@ import { TrabajadorComponent } from '../trabajador/trabajador.component';
 })
 export class AltaTrabajadoresComponent implements OnInit {
 
-  trabajador: TrabajadorComponent;
+  fecha: Date;
+  trabajador: Trabajador;
   constructor() {
+    this.fecha = new Date(1995, 11, 17);
+    this.trabajador = new Trabajador("Dani", "564535deF",this.fecha);
+
+  }
+
+  mostrar() {
+    return "" + this.trabajador.getNombre() + " , " + this.trabajador.getDni() + "," + this.trabajador.getFecha().toISOString();
   }
 
   ngOnInit(): void {
   }
+
 
 }
