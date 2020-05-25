@@ -1,24 +1,6 @@
-<div>
-  <p>Nombre del Empleado:{{nombre}}</p>
-  <p>Edad:{{edad}}</p>
-  <p>Los últimos tres sueldos son: {{sueldos[0]}}, {{sueldos[1]}} y {{sueldos[2]}}</p>
-  <p>En los últimos 3 meses ha ganado: {{ultimos3Sueldos()}}</p>
-  <p>{{esActivo()}}</p>
-</div>
-
-<p>{{incremento}}</p>
-<button (click)="incrementar()">Sumar 1</button>
-<button (click)="decrecer()">Restar 1</button>
-
-
-<div>
-  <p>Ingrese cliente<input type="text" [(ngModel)]="cliente"></p>
-  <p>Ingrese apellido<input type="text" [(ngModel)]="apellido"></p>
-  <p>Ingrese edad<input type="text" [(ngModel)]="edad2"></p>
-  <button (click)="guardar()">Guardar</button>
-  <p>{{mostrar()}}</p>
-</div>
-
 
 <app-alta-trabajadores></app-alta-trabajadores>
-
+<app-dias-vacaciones></app-dias-vacaciones>
+<app-borrar-trabajador></app-borrar-trabajador>
+<app-editar-trabajador></app-editar-trabajador>
+<app-buscar-trabajador></app-buscar-trabajador>

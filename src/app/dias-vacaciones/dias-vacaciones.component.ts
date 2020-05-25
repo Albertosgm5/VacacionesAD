@@ -11,5 +11,12 @@ export class DiasVacacionesComponent implements OnInit {
 
   ngOnInit(): void {
   }
+   guardar() {
+    this.resultado= ""+ this.trabajador + "," + this.solicitud;
+  }
+
+  mostrar() {
+    return this.resultado;
+  }
 
 }
