@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TrabajadorComponent } from '../trabajador/trabajador.component';
 
 @Component({
   selector: 'app-alta-trabajadores',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AltaTrabajadoresComponent implements OnInit {
 
-  constructor() { }
+  trabajador: TrabajadorComponent;
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

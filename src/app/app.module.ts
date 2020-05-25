@@ -8,6 +8,7 @@ import { BuscarTrabajadorComponent } from './buscar-trabajador/buscar-trabajador
 import { BorrarTrabajadorComponent } from './borrar-trabajador/borrar-trabajador.component';
 import { EditarTrabajadorComponent } from './editar-trabajador/editar-trabajador.component';
 import { TrabajadorComponent } from './trabajador/trabajador.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TrabajadorComponent } from './trabajador/trabajador.component';
   ],
   imports: [
     BrowserModule
-    , FormsModule
+    , FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

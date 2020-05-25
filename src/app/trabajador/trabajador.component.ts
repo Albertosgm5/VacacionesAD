@@ -5,11 +5,36 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './trabajador.component.html',
   styleUrls: ['./trabajador.component.css']
 })
-export class TrabajadorComponent implements OnInit {
+export class TrabajadorComponent {
+  nombre: string;
+  dni: string;
+  fecha: Date;
 
-  constructor() { }
+  constructor(nombre: string, dni: string,fecha: Date) {
+    this.nombre = this.nombre;
+    this.dni = dni;
+    this.fecha = fecha;
 
-  ngOnInit(): void {
   }
+
+  getNombre() {
+    return this.nombre;
+  }
+  getDni() {
+    return this.dni;
+  }
+  getDate() {
+    return this.fecha;
+  }
+  setNombre(nombre:string): void {
+    this.nombre =nombre;
+  }
+  setDni(dni:string): void {
+    this.dni = dni;
+  }
+  setDate(fecha:Date): void {
+    this.fecha = fecha;
+  }
+
 
 }
