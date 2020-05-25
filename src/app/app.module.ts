@@ -7,6 +7,7 @@ import { DiasVacacionesComponent } from './dias-vacaciones/dias-vacaciones.compo
 import { BuscarTrabajadorComponent } from './buscar-trabajador/buscar-trabajador.component';
 import { BorrarTrabajadorComponent } from './borrar-trabajador/borrar-trabajador.component';
 import { EditarTrabajadorComponent } from './editar-trabajador/editar-trabajador.component';
+import { TrabajadorComponent } from './trabajador/trabajador.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { EditarTrabajadorComponent } from './editar-trabajador/editar-trabajador
     DiasVacacionesComponent,
     BuscarTrabajadorComponent,
     BorrarTrabajadorComponent,
-    EditarTrabajadorComponent
+    EditarTrabajadorComponent,
+    TrabajadorComponent
   ],
   imports: [
     BrowserModule
