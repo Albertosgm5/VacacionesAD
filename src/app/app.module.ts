@@ -11,6 +11,7 @@ import { TrabajadorComponent } from './trabajador/trabajador.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import * as $ from 'jquery';
+import { TrabajadorServiceService } from './trabajador-service.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,7 @@ import * as $ from 'jquery';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [TrabajadorServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
