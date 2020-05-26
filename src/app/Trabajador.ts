@@ -3,10 +3,9 @@ public nombre: string;
 public dni: string;
 public fecha: Date;
 
-  constructor(nombre: string, dni: string, fecha:Date) {
+  constructor(nombre: string, dni: string) {
   this.nombre = nombre;
     this.dni = dni;
-    this.fecha = fecha
 
 }
 

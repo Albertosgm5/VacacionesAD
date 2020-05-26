@@ -12,12 +12,12 @@ export class AltaTrabajadoresComponent implements OnInit {
   trabajador: Trabajador;
   constructor() {
     this.fecha = new Date(1995, 11, 17);
-    this.trabajador = new Trabajador("Dani", "564535deF",this.fecha);
+    this.trabajador = new Trabajador("Dani", "564535deF");
 
   }
 
   mostrar() {
-    return "" + this.trabajador.getNombre() + " , " + this.trabajador.getDni() + "," + this.trabajador.getFecha().toISOString();
+    return "" + this.trabajador.getNombre() + " , " + this.trabajador.getDni();
   }
 
   ngOnInit(): void {

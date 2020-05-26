@@ -12,8 +12,12 @@ export class EditarTrabajadorComponent implements OnInit {
  trabajador: Trabajador;
  nombre:string;
  dni:string;
+  trabajadores = [new Trabajador('Juan', '14535346gc'), new Trabajador('Albert', '149939929gc')];
+  constructor() {
+    this.trabajador = new Trabajador("", "");
 
-trabajadores = [
+  }
+  trabajadores2 = [
              {nombre:'Juan',dni:'14535346gc', fecha:'09/09/1992'},
                {nombre:'Andres',dni:'14535346b', fecha:'09/09/1992'},
                {nombre:'Alberto', dni:'564535deF', fecha:'09/09/1992'},
@@ -22,26 +26,24 @@ trabajadores = [
               ];
 
   editar() {
-    for(let x=0;x<this.trabajadores.length;x++){
-      if (this.trabajadores[x].dni==this.dni)
+    for (let x = 0; x < this.trabajadores.length; x++){
+      if (this.trabajadores[x].getDni() === this.dni)
       {
-        this.trabajadores[x].nombre=this.nombre;
+        this.trabajadores[x].setNombre(this.nombre);
         this.trabajador.setNombre(this.nombre);
-         this.trabajador.setDni(this.dni);
+        this.trabajador.setDni(this.dni);
       }
     }
-    alert('No existe el dni de trabajador ingresado');
+    if (this.trabajador.getDni() == "") {
+    alert('No existe el dni del trabajador ingresado');
+  }
   }
     ngOnInit(): void {
   }
   mostrar() {
   
-    return "" + this.trabajador.getNombre() + " , " + this.trabajador.getDni();
+    return "" + this.trabajador.getNombre() + "  " + this.trabajador.getDni();
 
   }
 
-
-  mostrar2() {
-    return 'Holaa';
-  }
 }
