@@ -3,8 +3,13 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\alta-trabajadores"
+    "\\src\\app\\alta-trabajadores",
+    "\\src\\app\\borrar-trabajador",
+    "\\src\\app\\buscar-trabajador",
+    "\\src\\app\\dias-vacaciones",
+    "\\src\\app\\editar-trabajador",
+    "\\src\\app\\trabajador"
   ],
-  "SelectedNode": "\\src\\app\\alta-trabajadores\\alta-trabajadores.component.ts",
+  "SelectedNode": "\\src\\app\\borrar-trabajador\\borrar-trabajador.component.ts",
   "PreviewInSolutionExplorer": false
 }
