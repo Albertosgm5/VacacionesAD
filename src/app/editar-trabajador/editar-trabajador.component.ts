@@ -11,9 +11,6 @@ export class EditarTrabajadorComponent implements OnInit {
   fecha: Date;
  trabajador: Trabajador;
 
- 
-
-
 trabajadores = [
              {nombre:'Juan',dni:'14535346gc', fecha:'09/09/1992'},
                {nombre:'Andres',dni:'14535346b', fecha:'09/09/1992'},
@@ -38,5 +35,10 @@ trabajadores = [
   
     return "" + this.trabajador.getNombre() + " , " + this.trabajador.getDni()+ " , " + this.trabajador.getFecha().toISOString();
 
+  }
+
+
+  mostrar2() {
+    return 'Holaa';
   }
 }
