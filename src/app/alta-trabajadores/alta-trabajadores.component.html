@@ -1,7 +1,8 @@
 <div>
   <p>Ingrese nombre<input type="text" [(ngModel)]="nombre"></p>
   <p>Ingrese DNI<input type="text" [(ngModel)]="dni"></p>
-  <p><input type="date" class="form-control" name="fechaFactura" [(ngModel)]="fecha" required></p>
+  <p>Ingrese la Fecha<input type="date" class="form-control" name="fechaFactura" [(ngModel)]="fecha" required></p>
   <button (click)="modificar()">Alta trabajador</button>
   <p>{{mostrar()}}</p>
 </div>
+
