@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Trabajador } from '../Trabajador';
+import { Vacaciones } from '../Vacaciones';
 
 @Component({
   selector: 'app-dias-vacaciones',
@@ -10,20 +11,16 @@ export class DiasVacacionesComponent implements OnInit {
 
    fecha: Date;
  trabajador: Trabajador;
-  constructor() {
-    this.fecha = new Date(1992, 5, 6);
-    this.trabajador = new Trabajador("Alberto", "564535deF",this.fecha);
+ vacaciones: Vacaciones;
 
-  }
 
-  ngOnInit(): void {
-  }
    guardar() {
-    this.resultado= ""+ this.trabajador + "," + this.solicitud;
+   this.trabajador + "," + this.solicitud;
   }
-
+    ngOnInit(): void {
+  }
   mostrar() {
-    return this.resultado;
+    //return this.resultado;
   }
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Trabajador } from '../Trabajador';
 
+
 @Component({
   selector: 'app-buscar-trabajador',
   templateUrl: './buscar-trabajador.component.html',
@@ -10,18 +11,13 @@ export class BuscarTrabajadorComponent implements OnInit {
 
   fecha: Date;
   trabajador: Trabajador;
-  constructor() {
-    this.fecha = new Date(1995, 11, 17);
-    this.trabajador = new Trabajador("Dani", "564535deF",this.fecha);
-
-  }
-}
+  
 trabajadores = [
-               {nombre:Juan,dni:14535346g},
-               {nombre:Andres,dni:14535346g},
-               {nombre:Alberto, dni:564535deF},
-               {nombre:Juan, dni:14535346g},
-               {nombre:Juan, dni:14535346g},
+             {nombre:'Juan',dni:'14535346gc'},
+               {nombre:'Andres',dni:'14535346b'},
+               {nombre:'Alberto', dni:'564535deF'},
+               {nombre:'Juares', dni:'14535346g'},
+               {nombre:'Juan', dni:'14535346a'}
               ];
   ngOnInit(): void {
   }

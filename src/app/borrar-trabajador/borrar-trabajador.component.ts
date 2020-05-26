@@ -9,18 +9,13 @@ import { Trabajador } from '../Trabajador';
 export class BorrarTrabajadorComponent implements OnInit {
  fecha: Date;
  trabajador: Trabajador;
-  constructor() {
-    this.fecha = new Date(1992, 5, 6);
-    this.trabajador = new Trabajador("Alberto", "564535deF",this.fecha);
 
-  }
-}
 trabajadores = [
-               {nombre:Juan,dni:14535346g},
-               {nombre:Andres,dni:14535346g},
-               {nombre:Alberto, dni:564535deF},
-               {nombre:Juan, dni:14535346g},
-               {nombre:Juan, dni:14535346g},
+               {nombre:'Juan',dni:'14535346gc'},
+               {nombre:'Andres',dni:'14535346b'},
+               {nombre:'Alberto', dni:'564535deF'},
+               {nombre:'Juares', dni:'14535346g'},
+               {nombre:'Juan', dni:'14535346a'}
               ];
 
   ngOnInit(): void {
@@ -33,9 +28,6 @@ trabajadores = [
         return;
       }
       alert('No existe el dni de trabajador ingresado');
-  }
-   mostrar() {
-    return "" + this.trabajador.getNombre() + " , " + this.trabajador.getDni() + "," + this.trabajador.getFecha().toISOString();
   }
 
 }
