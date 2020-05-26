@@ -23,7 +23,7 @@ trabajadores = [
   }
    buscar(trabajador) {
     for(let x=0;x<this.trabajadores.length;x++)
-      if (this.trabajadores[x].dni==trabajador.dni)
+      if (this.trabajadores[x].dni == trabajador.dni)
       {
         return this.trabajadores;
       }
