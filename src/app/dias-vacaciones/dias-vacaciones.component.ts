@@ -13,14 +13,21 @@ export class DiasVacacionesComponent implements OnInit {
  trabajador: Trabajador;
  vacaciones: Vacaciones;
  solicitud : number;
+ resul : number
+ dni:string;
+  trabajadores = [new Trabajador('Juan', '14535346gc'), new Trabajador('Albert', '149939929gc')];
+  constructor() {
+    this.trabajador = new Trabajador("", "");
+  }
 
    guardar() {
-   /*this.solicitud <=
-   if(){
+   if(this.solicitud <= this.trabajador.getDiasAcumulados()){
     alert('Vacaciones concedidas');
+    resul = this.solicitud - this.trabajador.getDiasAcumulados();
+    this.trabajador.setDiasAcumulados(resul);
     }else{
      alert('Vacaciones denegadas');
-    }*/
+    }
   }
     ngOnInit(): void {
   }
