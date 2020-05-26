@@ -10,6 +10,7 @@ import { EditarTrabajadorComponent } from './editar-trabajador/editar-trabajador
 import { TrabajadorComponent } from './trabajador/trabajador.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import * as $ from 'jquery';
 @NgModule({
   declarations: [
     AppComponent,
