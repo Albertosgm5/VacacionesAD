@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\alta-trabajadores"
   ],
+  "SelectedNode": "\\src\\app\\alta-trabajadores\\alta-trabajadores.component.ts",
   "PreviewInSolutionExplorer": false
 }
