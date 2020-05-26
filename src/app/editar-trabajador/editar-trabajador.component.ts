@@ -10,6 +10,8 @@ export class EditarTrabajadorComponent implements OnInit {
 
   fecha: Date;
  trabajador: Trabajador;
+ nombre:string;
+ dni:string;
 
 trabajadores = [
              {nombre:'Juan',dni:'14535346gc', fecha:'09/09/1992'},
@@ -21,10 +23,11 @@ trabajadores = [
 
   editar() {
     for(let x=0;x<this.trabajadores.length;x++){
-      if (this.trabajadores[x].dni==this.trabajador.dni)
+      if (this.trabajadores[x].dni==this.dni)
       {
-        this.trabajadores[x].nombre=this.trabajador.nombre;
-        this.trabajador.setNombre(this.trabajador.nombre);
+        this.trabajadores[x].nombre=this.nombre;
+        this.trabajador.setNombre(this.nombre);
+         this.trabajador.setDni(this.dni);
       }
     }
     alert('No existe el dni de trabajador ingresado');
@@ -33,7 +36,7 @@ trabajadores = [
   }
   mostrar() {
   
-    return "" + this.trabajador.getNombre() + " , " + this.trabajador.getDni()+ " , " + this.trabajador.getFecha().toISOString();
+    return "" + this.trabajador.getNombre() + " , " + this.trabajador.getDni();
 
   }
 
