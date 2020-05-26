@@ -15,18 +15,24 @@ export class DiasVacacionesComponent implements OnInit {
  solicitud : number;
  resul : number
  dni:string;
-  trabajadores = [new Trabajador('Juan', '14535346gc'), new Trabajador('Albert', '149939929gc')];
   constructor() {
     this.trabajador = new Trabajador("", "");
   }
 
    guardar() {
-   if(this.solicitud <= this.trabajador.getDiasAcumulados()){
-    alert('Vacaciones concedidas');
-    resul = this.solicitud - this.trabajador.getDiasAcumulados();
-    this.trabajador.setDiasAcumulados(resul);
-    }else{
-     alert('Vacaciones denegadas');
+    for(let x=0;x<this.trabajadores.length;x++){
+        if (this.trabajadores[x].getDni() === this.dni){
+          if(this.solicitud <= this.trabajador.getDiasAcumulados()){
+            alert('Vacaciones concedidas');
+            resul = this.solicitud - this.trabajador.getDiasAcumulados();
+            this.trabajador.setDiasAcumulados(resul);
+          }else{
+            alert('Vacaciones denegadas');
+          }
+        }
+    }
+    if (this.trabajador.getDni() == "") {
+    alert('No existe el dni de trabajador ingresado')
     }
   }
     ngOnInit(): void {

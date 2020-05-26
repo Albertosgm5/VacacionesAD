@@ -12,7 +12,7 @@ export class EditarTrabajadorComponent implements OnInit {
  trabajador: Trabajador;
  nombre:string;
  dni:string;
-  trabajadores = [new Trabajador('Juan', '14535346gc'), new Trabajador('Albert', '149939929gc')];
+  trabajadores = [new Trabajador('Juan', '14535346gc', '26/05/2020', 0), new Trabajador('Albert', '149939929gc', '26/05/2020', 0)];
   constructor() {
     this.trabajador = new Trabajador("", "");
 
