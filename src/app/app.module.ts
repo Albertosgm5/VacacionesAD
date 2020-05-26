@@ -9,7 +9,7 @@ import { BorrarTrabajadorComponent } from './borrar-trabajador/borrar-trabajador
 import { EditarTrabajadorComponent } from './editar-trabajador/editar-trabajador.component';
 import { TrabajadorComponent } from './trabajador/trabajador.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule
     , FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
