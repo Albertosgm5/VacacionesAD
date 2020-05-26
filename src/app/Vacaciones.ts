@@ -1,5 +1,5 @@
 import { Trabajador } from '../Trabajador';
-export class Trabajador {
+export class Vacaciones {
 public trabajador: Trabajador;
 public solicitud: number;
 public resultado: boolean;
