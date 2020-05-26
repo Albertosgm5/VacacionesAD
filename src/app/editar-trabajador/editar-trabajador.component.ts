@@ -10,6 +10,7 @@ export class EditarTrabajadorComponent implements OnInit {
 
   fecha: Date;
  trabajador: Trabajador;
+
  
 
 
@@ -25,7 +26,6 @@ trabajadores = [
       if (this.trabajadores[x].dni==this.trabajador.dni)
       {
         this.trabajadores[x].nombre=this.trabajador.nombre;
-        this.trabajadores[x].dni=this.trabajador.dni;
         return;
       }
     }
