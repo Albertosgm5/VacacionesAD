@@ -15,9 +15,8 @@ export class DiasVacacionesComponent implements OnInit {
  solicitud : number;
  resul : number
  dni:string;
-  constructor() {
-    this.trabajador = new Trabajador("", "");
-  }
+  trabajadores = [new Trabajador('Juan', '14535346gc', '2020/05/26', 0), new Trabajador('Albert', '149939929gc', '2020/05/26', 0)];
+
 
    guardar() {
     for(let x=0;x<this.trabajadores.length;x++){
