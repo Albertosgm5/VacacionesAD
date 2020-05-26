@@ -14,10 +14,7 @@ export class BuscarTrabajadorComponent implements OnInit {
  nombre:string;
  dni:string;
   trabajadores = [new Trabajador('Juan', '14535346gc', '2020/05/26', 0), new Trabajador('Albert', '149939929gc', '2020/05/26', 0)];
-  constructor() {
-    this.trabajador = new Trabajador("", "");
 
-  }
   ngOnInit(): void {
   }
    buscar() {

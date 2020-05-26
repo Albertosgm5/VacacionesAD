@@ -13,7 +13,6 @@ export class DiasVacacionesComponent implements OnInit {
  trabajador: Trabajador;
  vacaciones: Vacaciones;
  solicitud : number;
- resul : number
  dni:string;
   trabajadores = [new Trabajador('Juan', '14535346gc', '2020/05/26', 0), new Trabajador('Albert', '149939929gc', '2020/05/26', 0)];
 
@@ -23,8 +22,7 @@ export class DiasVacacionesComponent implements OnInit {
         if (this.trabajadores[x].getDni() === this.dni){
           if(this.solicitud <= this.trabajador.getDiasAcumulados()){
             alert('Vacaciones concedidas');
-            resul = this.solicitud - this.trabajador.getDiasAcumulados();
-            this.trabajador.setDiasAcumulados(resul);
+            this.trabajador.setDiasAcumulados(this.solicitud - this.trabajador.getDiasAcumulados());
           }else{
             alert('Vacaciones denegadas');
           }

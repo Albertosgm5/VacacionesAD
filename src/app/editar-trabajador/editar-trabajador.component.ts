@@ -13,10 +13,7 @@ export class EditarTrabajadorComponent implements OnInit {
  nombre:string;
  dni:string;
   trabajadores = [new Trabajador('Juan', '14535346gc', '2020/05/26', 0), new Trabajador('Albert', '149939929gc', '2020/05/26', 0)];
-  constructor() {
-    this.trabajador = new Trabajador("", "");
 
-  }
   trabajadores2 = [
              {nombre:'Juan',dni:'14535346gc', fecha:'09/09/1992'},
                {nombre:'Andres',dni:'14535346b', fecha:'09/09/1992'},

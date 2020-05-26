@@ -11,11 +11,8 @@ export class BorrarTrabajadorComponent implements OnInit {
  trabajador: Trabajador;
   nombre:string;
  dni:string;
-  trabajadores = [new Trabajador('Juan', '14535346gc', '2020/05/26', 0), new Trabajador('Albert', '149939929gc', '2020/05/26', 0)];
-  constructor() {
-    this.trabajador = new Trabajador("", "");
+  trabajadores = [new Trabajador('Juan', '14535346gc', "2020/05/26", 0), new Trabajador('Albert', '149939929gc', "2020/05/06", 0)];
 
-  }
   ngOnInit(): void {
   }
    borrar() {
