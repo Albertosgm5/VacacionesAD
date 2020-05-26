@@ -11,22 +11,29 @@ export class BuscarTrabajadorComponent implements OnInit {
 
   fecha: Date;
   trabajador: Trabajador;
-  
-trabajadores = [
-             {nombre:'Juan',dni:'14535346gc'},
-               {nombre:'Andres',dni:'14535346b'},
-               {nombre:'Alberto', dni:'564535deF'},
-               {nombre:'Juares', dni:'14535346g'},
-               {nombre:'Juan', dni:'14535346a'}
-              ];
+ nombre:string;
+ dni:string;
+  trabajadores = [new Trabajador('Juan', '14535346gc'), new Trabajador('Albert', '149939929gc')];
+  constructor() {
+    this.trabajador = new Trabajador("", "");
+
+  }
   ngOnInit(): void {
   }
-   buscar(trabajador) {
-    for(let x=0;x<this.trabajadores.length;x++)
-      if (this.trabajadores[x].dni == trabajador.dni)
+   buscar() {
+   for (let x = 0; x < this.trabajadores.length; x++){
+      if (this.trabajadores[x].getDni() === this.dni)
       {
-        return this.trabajadores;
+        this.trabajador.setNombre(this.trabajadores[x].getNombre());
+        this.trabajador.setDni(this.dni);
       }
-      alert('No existe el dni de trabajador ingresado');
+    }
+    if (this.trabajador.getDni() == "") {
+      alert('No existe el dni del trabajador ingresado');
+    }
+   }
+  
+   mostrar() {
+    return "" + this.trabajador.getNombre() + "  " + this.trabajador.getDni();
   }
 }

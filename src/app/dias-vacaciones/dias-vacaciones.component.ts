@@ -12,15 +12,17 @@ export class DiasVacacionesComponent implements OnInit {
    fecha: Date;
  trabajador: Trabajador;
  vacaciones: Vacaciones;
- solicitud2 : number;
+ solicitud : number;
 
    guardar() {
-   this.trabajador + "," + this.solicitud2;
+   /*this.solicitud <=
+   if(){
+    alert('Vacaciones concedidas');
+    }else{
+     alert('Vacaciones denegadas');
+    }*/
   }
     ngOnInit(): void {
-  }
-  mostrar() {
-    //return this.resultado;
   }
 
 }
