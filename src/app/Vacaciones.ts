@@ -1,4 +1,4 @@
-import { Trabajador } from '../Trabajador';
+import { Trabajador } from './Trabajador';
 export class Vacaciones {
 public trabajador: Trabajador;
 public solicitud: number;

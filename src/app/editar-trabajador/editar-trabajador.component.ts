@@ -10,11 +10,7 @@ export class EditarTrabajadorComponent implements OnInit {
 
   fecha: Date;
  trabajador: Trabajador;
-  constructor() {
-    this.fecha = new Date(1992, 5, 6);
-    this.trabajador = new Trabajador("Alberto", "564535deF",this.fecha);
-
-  }
+ 
 
 
 trabajadores = [
@@ -25,13 +21,14 @@ trabajadores = [
                {nombre:'Juan', dni:'14535346a'}
               ];
   editar() {
-    for(let x=0;x<this.trabajadores.length;x++)
+    for(let x=0;x<this.trabajadores.length;x++){
       if (this.trabajadores[x].dni==this.trabajador.dni)
       {
         this.trabajadores[x].nombre=this.trabajador.nombre;
-        this.trabajadores[x].edad=this.trabajador.edad;
+        this.trabajadores[x].dni=this.trabajador.dni;
         return;
-      }        
+      }
+    }
     alert('No existe el dni de trabajador ingresado');
   }
     ngOnInit(): void {

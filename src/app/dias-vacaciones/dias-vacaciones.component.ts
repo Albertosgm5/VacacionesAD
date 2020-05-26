@@ -12,10 +12,10 @@ export class DiasVacacionesComponent implements OnInit {
    fecha: Date;
  trabajador: Trabajador;
  vacaciones: Vacaciones;
-
+ solicitud2 : number;
 
    guardar() {
-   this.trabajador + "," + this.solicitud;
+   this.trabajador + "," + this.solicitud2;
   }
     ngOnInit(): void {
   }
