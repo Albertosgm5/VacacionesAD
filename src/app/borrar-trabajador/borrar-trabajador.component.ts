@@ -9,25 +9,22 @@ import { Trabajador } from '../Trabajador';
 export class BorrarTrabajadorComponent implements OnInit {
  fecha: Date;
  trabajador: Trabajador;
-
-trabajadores = [
-               {nombre:'Juan',dni:'14535346gc'},
-               {nombre:'Andres',dni:'14535346b'},
-               {nombre:'Alberto', dni:'564535deF'},
-               {nombre:'Juares', dni:'14535346g'},
-               {nombre:'Juan', dni:'14535346a'}
-              ];
+  nombre:string;
+ dni:string;
+  trabajadores = [new Trabajador('Juan', '14535346gc'), new Trabajador('Albert', '149939929gc')];
 
   ngOnInit(): void {
   }
-   borrar(trabajador) {
+   borrar() {
     for(let x=0;x<this.trabajadores.length;x++)
-      if (this.trabajadores[x].dni==trabajador.dni)
+      if (this.trabajadores[x].getDni() === this.dni)
       {
         this.trabajadores.splice(x,1);
+         alert('Trabajador borrado correctamente');
         return;
+      }else{
+        alert('No existe el dni de trabajador ingresado');
       }
-      alert('No existe el dni de trabajador ingresado');
   }
 
 }
