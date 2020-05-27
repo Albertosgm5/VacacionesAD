@@ -3,15 +3,13 @@ public nombre: string;
 public dni: string;
 public fecha: Date;
   public diasAcumulados: number;
-  public id: number;
   private mensaje: string;
 
-  constructor(nombre: string, dni: string, fecha: Date, diasAcumulados:number,id:number) {
+  constructor(nombre: string, dni: string, fecha: Date, diasAcumulados:number) {
     this.nombre = nombre;
     this.dni = dni;
     this.fecha = fecha;
     this.diasAcumulados = diasAcumulados;
-    this.id = id;
 }
 
 getNombre() {
