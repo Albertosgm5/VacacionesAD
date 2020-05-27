@@ -2,7 +2,8 @@ export class Trabajador {
 public nombre: string;
 public dni: string;
 public fecha: Date;
-public diasAcumulados: number;
+  public diasAcumulados: number;
+  private mensaje: string;
 
   constructor(nombre: string, dni: string, fecha: Date, diasAcumulados:number) {
     this.nombre = nombre;
@@ -36,6 +37,9 @@ setFecha(fecha: Date): void {
     this.diasAcumulados = diasAcumulados;
 }
 
-
+  toString() {
+    this.mensaje = "Nombre: " + this.getNombre() + ", DNI: " + this.getDni() + ", Contratacion: " + this.getFecha().getTime() + ", Dias Acumulados: " + this.getDiasAcumulados();
+    return this.mensaje;
+  }
 
 }

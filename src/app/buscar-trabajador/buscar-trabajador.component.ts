@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Trabajador } from '../Trabajador';
+import { TrabajadorServiceService } from '../trabajador-service.service';
 
 
 @Component({
@@ -9,28 +10,36 @@ import { Trabajador } from '../Trabajador';
 })
 export class BuscarTrabajadorComponent implements OnInit {
 
-  fecha: Date;
   trabajador: Trabajador;
- nombre:string;
- dni:string;
-  trabajadores = [new Trabajador('Juan', '14535346gc', new Date ('2020/05/26'), 0), new Trabajador('Albert', '149939929gc', new Date ('2020/05/26'), 0)];
+  trabajadores = [];
+  dni: string;
+  encontrado: boolean = false;
+  mensaje: string;
+
+  constructor(public json: TrabajadorServiceService) {
+    this.json.getJson('http://localhost:3000/trabajadores').subscribe((res: any) => {
+      this.trabajadores = res;
+      console.log(this.trabajadores);
+    })
+  }
+
+  mostrar() {
+    return this.mensaje;
+  }
 
   ngOnInit(): void {
   }
    buscar() {
    for (let x = 0; x < this.trabajadores.length; x++){
-      if (this.trabajadores[x].getDni() === this.dni)
+      if (this.trabajadores[x].dni === this.dni)
       {
-        this.trabajador.setNombre(this.trabajadores[x].getNombre());
-        this.trabajador.setDni(this.dni);
+        this.trabajador = this.trabajadores[x];
+        this.encontrado = true;
+        this.mensaje = "Nombre: " + this.trabajador.nombre + ", DNI: " + this.trabajador.dni + ", Contratacion: " + this.trabajador.fecha + ", Dias Acumulados: " + this.trabajador.diasAcumulados;
       }
-    }
-    if (this.trabajador.getDni() == "") {
-      alert('No existe el dni del trabajador ingresado');
-    }
+     }
+     if (!this.encontrado) {
+       this.mensaje = "No existe ningun trabajador con ese DNI!"
+     }
    }
-  
-   mostrar() {
-    return "" + this.trabajador.getNombre() + "  " + this.trabajador.getDni();
-  }
 }
