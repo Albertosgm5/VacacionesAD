@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Trabajador } from '../Trabajador';
-import { TrabajadorServiceService} from '../trabajador-service.service'
+
 @Component({
   selector: 'app-alta-trabajadores',
   templateUrl: './alta-trabajadores.component.html',
@@ -12,40 +12,25 @@ export class AltaTrabajadoresComponent implements OnInit {
   fecha: Date;
   fecha2: Date;
   fecha3: Date;
-  trabajadores = [];
-  diasAcumulados: number;
+  diferencia: number;
   trabajador: Trabajador;
-  constructor(public json: TrabajadorServiceService) {
+  constructor() {
     this.fecha3 = new Date();
-    this.json.getJson('http://localhost:3000/trabajadores').subscribe((res: any) => {
-      console.log(res);
-      this.trabajadores = res;
-      console.log(this.trabajadores);
-  })
-  }
-
-
-  agregar(): void{
-    this.fecha2 = new Date(this.fecha);
-    this.diasAcumulados = (this.fecha3.getTime() - this.fecha2.getTime()) / (1000 * 60 * 60 * 24);
-    this.diasAcumulados = (this.diasAcumulados / 30) * 2.5;
-    this.diasAcumulados = Math.ceil(this.diasAcumulados);
-    this.trabajador = new Trabajador(this.nombre, this.dni, this.fecha2, this.diasAcumulados);
-    this.json.addTrabajador(this.trabajador, "http://localhost:3000/trabajadores").subscribe(trabajador => this.trabajadores.push());
-    if (this.trabajador != null) {
-      this.mostrar();
-    }
   }
 
   mostrar() {
-    if (this.trabajador != null) {
-      return "Trabajador agregado";
-    }
-    //return "" + this.trabajador.nombre + "," + this.trabajador.dni + "," + this.trabajador.getFecha().getFullYear() + ", " + this.trabajador.getDiasAcumulados();
+    //   return "" + this.trabajador.getNombre() + " , " + this.trabajador.getDni();
+    return "" + this.trabajador.getNombre() + "," + this.trabajador.getDni() + "," + this.trabajador.getFecha().getFullYear() + ", " + this.diferencia;
+  }
+  modificar(): void {
+    this.fecha2 = new Date(this.fecha);
+    this.diferencia = (this.fecha3.getTime() - this.fecha2.getTime()) / (1000 * 60 * 60 * 24);
+    this.diferencia = (this.diferencia / 30) * 2.5;
+    this.diferencia = Math.ceil(this.diferencia);
+    this.trabajador = new Trabajador(this.nombre, this.dni, this.fecha2);
   }
 
-ngOnInit(): void {
- // this.fetchData;
+  ngOnInit(): void {
   }
 
 

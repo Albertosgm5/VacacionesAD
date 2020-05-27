@@ -1,25 +1,7 @@
 <div>
   <p>Ingrese nombre<input type="text" [(ngModel)]="nombre"></p>
   <p>Ingrese DNI<input type="text" [(ngModel)]="dni"></p>
-  <p>Ingrese la Fecha<input type="date" class="form-control" name="fechaFactura" [(ngModel)]="fecha" required></p>
-  <button (click)="agregar()">Alta trabajador</button>
+  <p><input type="date" class="form-control" name="fechaFactura" [(ngModel)]="fecha" required></p>
+  <button (click)="modificar()">Alta trabajador</button>
   <p>{{mostrar()}}</p>
 </div>
-
-
-<table>
-  <tr>
-  <th>Nombre</th>
-  <th>DNI</th>
-  <th>Fecha</th>
-  <th>Dias acumulados</th>
-  </tr>
-  <tr *ngFor="let trabajadore of trabajadores">
-    <td>{{trabajadore.nombre}}</td>
-    <td>{{trabajadore.dni}}</td>
-    <td>{{trabajadore.fecha}}</td>
-    <td>{{trabajadore.diasAcumulados}}</td>
-  </tr>
-</table>
-
-
