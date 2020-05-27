@@ -1,0 +1,52 @@
+button{
+  width:100px;
+  height:100px;
+  background-color:#7CF0BF;
+  margin: 5px;
+  padding:10px;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  border-radius: 500px;
+  font-size:11px;
+  line-height:32px;
+  text-transform: uppercase;
+}
+button:hover{
+  background-color:#05D67E;
+}
+button a{
+  color:#fff;
+  text-decoration:none;
+  padding:5px 5px 5px 0;
+}
+
+	input[type=text], input[type=password]{
+  		width: 10%; 
+  		font-family: "Lucida Grande","Lucida Sans Unicode",Tahoma,Sans-Serif;
+  		padding: 5px;
+  		font-size: 0.9em;
+  		border-radius: 5px;
+  		background: rgba(0, 0, 0, 0.07);
+	}
+  
+  input[type=text]:focus, input[type=password]:focus{
+		background: #FFFFFF;
+	}
+    p{
+
+font-family: Arial Black; 
+font-weight: bold; font-size: 30px; 
+background: #202020; 
+-webkit-background-clip: text; 
+-moz-background-clip: text; 
+background-clip: text; 
+color: transparent; 
+text-shadow: 0px 3px 3px rgba(255,255,255,0.4),0px -1px 1px rgba(0,0,0,0.3);
+}
+ pre{
+color: #1278BF; 
+font-family: Arial Black; 
+font-weight: bold; 
+font-size: 20px; 
+text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
