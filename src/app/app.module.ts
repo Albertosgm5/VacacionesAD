@@ -9,6 +9,7 @@ import { BorrarTrabajadorComponent } from './borrar-trabajador/borrar-trabajador
 import { EditarTrabajadorComponent } from './editar-trabajador/editar-trabajador.component';
 import { TrabajadorComponent } from './trabajador/trabajador.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { TrabajadorServiceService } from './trabajador-service.service';
 @NgModule({
@@ -25,6 +26,7 @@ import { TrabajadorServiceService } from './trabajador-service.service';
     BrowserModule
     , FormsModule,
     HttpClientModule,
+    HttpModule,
     AppRoutingModule
   ],
   providers: [TrabajadorServiceService],

@@ -1,0 +1,71 @@
+{
+  "trabajadores": [
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "dni": "14535346gc"
+    },
+    {
+      "id": 2,
+      "nombre": "Andres",
+      "dni": "14535346b"
+    },
+    {
+      "id": 3,
+      "nombre": "Alberto",
+      "dni": "564535deF"
+    },
+    {
+      "id": 4,
+      "nombre": "Juares",
+      "dni": "14535346g"
+    },
+    {
+      "id": 5,
+      "nombre": "Juan",
+      "dni": "14535346a"
+    },
+    {
+      "nombre": "funciona",
+      "dni": "Genial",
+      "fecha": "2020-06-11T22:00:00.000Z",
+      "diasAcumulados": 0,
+      "id": 6
+    },
+    {
+      "nombre": "funciona",
+      "dni": "Genial",
+      "fecha": "2020-06-11T22:00:00.000Z",
+      "diasAcumulados": 0,
+      "id": 7
+    },
+    {
+      "nombre": "ergherge4w",
+      "dni": "546515rg",
+      "fecha": "2019-12-13T00:00:00.000Z",
+      "diasAcumulados": 14,
+      "id": 8
+    },
+    {
+      "nombre": "dfhgreg",
+      "dni": "dfgrwge",
+      "fecha": "2019-06-05T00:00:00.000Z",
+      "diasAcumulados": 30,
+      "id": 9
+    },
+    {
+      "nombre": "fgewge4w",
+      "dni": "rwgewg",
+      "fecha": "2020-05-15T00:00:00.000Z",
+      "diasAcumulados": 2,
+      "id": 10
+    },
+    {
+      "nombre": "gfbndfb",
+      "dni": "dfbefbreb",
+      "fecha": "2020-05-13T00:00:00.000Z",
+      "diasAcumulados": 2,
+      "id": 11
+    }
+  ]
+}
