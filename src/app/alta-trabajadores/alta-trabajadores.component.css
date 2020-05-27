@@ -1,0 +1,8 @@
+table,th,td{border:1px solid #E6D62A; margin:1450px;}
+table {margin: 0 auto;text-align: center;}
+th{background-color:black; color:white; width: 140px; height:70px;}
+td{background-color:#198C4F ; color:#000000; width: 140px; height:70px;}
+table{
+border:3px solid;
+border-radius:10px;
+}

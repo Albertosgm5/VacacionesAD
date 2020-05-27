@@ -73,6 +73,20 @@
       "fecha": "2020-05-12T00:00:00.000Z",
       "diasAcumulados": 2,
       "id": 12
+    },
+    {
+      "nombre": "1",
+      "dni": "1",
+      "fecha": "2020-04-29T00:00:00.000Z",
+      "diasAcumulados": 3,
+      "id": 13
+    },
+    {
+      "nombre": "5",
+      "dni": "5",
+      "fecha": "2020-05-16T00:00:00.000Z",
+      "diasAcumulados": 1,
+      "id": 14
     }
   ]
 }
