@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Trabajador } from '../Trabajador';
-import { Http, Response, Headers } from '@angular/http';
 import { TrabajadorServiceService} from '../trabajador-service.service'
 @Component({
   selector: 'app-alta-trabajadores',
@@ -16,7 +15,6 @@ export class AltaTrabajadoresComponent implements OnInit {
   trabajadores = [];
   diasAcumulados: number;
   trabajador: Trabajador;
-  private headers = new Headers({ 'Content-Type': 'application/json' });
   constructor(public json: TrabajadorServiceService) {
     this.fecha3 = new Date();
     this.json.getJson('http://localhost:3000/trabajadores').subscribe((res: any) => {
@@ -26,13 +24,6 @@ export class AltaTrabajadoresComponent implements OnInit {
   })
   }
 
-  fetchData = function () {
-    this.http.get("http://localhost:5555/trabajadores").subscribe(
-    (res: Response) => {
-      this.trabajadores = res.json();
-    }
-  )
-}
 
   agregar(): void{
     this.fecha2 = new Date(this.fecha);
