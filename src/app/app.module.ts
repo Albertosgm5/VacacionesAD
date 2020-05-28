@@ -22,8 +22,8 @@ import { TrabajadorServiceService } from './trabajador-service.service';
     TrabajadorComponent
   ],
   imports: [
-    BrowserModule
-    , FormsModule,
+    BrowserModule,
+    FormsModule,
     HttpClientModule,
     AppRoutingModule
   ],
