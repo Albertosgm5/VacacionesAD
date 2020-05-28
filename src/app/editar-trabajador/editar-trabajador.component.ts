@@ -31,7 +31,8 @@ export class EditarTrabajadorComponent implements OnInit {
         this.trabajador.nombre =this.nombre;
         this.trabajador.fecha = this.fecha;
         console.log(this.trabajador);
-        this.json.updateTrabajador(this.trabajador, "http://localhost:3000/trabajadores").subscribe(trabajador => this.trabajadores.push());
+        this.json.updateTrabajador(this.trabajador, "http://localhost:3000/trabajadores").subscribe(trabajador => this.trabajador2);
+
       }
     }
     if (this.trabajador2 != null) {

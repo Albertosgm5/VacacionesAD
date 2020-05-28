@@ -10,7 +10,9 @@ import { TrabajadorServiceService } from '../trabajador-service.service'
 export class DiasVacacionesComponent implements OnInit {
 
  trabajador: Trabajador;
- vacaciones: Vacaciones;
+  vacaciones: Vacaciones;
+  encontrado: boolean = false;
+  mensaje : string;
  solicitud : number;
   dni: string;
   trabajadores = [];
@@ -22,23 +24,28 @@ export class DiasVacacionesComponent implements OnInit {
     })
   }
 
+  mostrar() {
+    return this.mensaje;
+  }
 
    guardar() {
     for(let x=0;x<this.trabajadores.length;x++){
       if (this.trabajadores[x].dni === this.dni) {
+        this.encontrado = true;
         this.trabajador = this.trabajadores[x];
         if (this.solicitud <= this.trabajador.diasAcumulados && this.solicitud != 0) {
           this.trabajador.diasAcumulados = (this.trabajador.diasAcumulados -this.solicitud);
           this.json.updateTrabajador(this.trabajador, "http://localhost:3000/trabajadores").subscribe(trabajador => this.trabajador);
-          alert('Vacaciones concedidas');
+          this.mensaje = "Vacaciones Concedidas";
           }else{
-            alert('Vacaciones denegadas');
+          this.mensaje = "Vacaciones Denegadas";
           }
         }
-    }
-    if (this.trabajador.dni == "") {
-    alert('No existe el dni de trabajador ingresado')
-    }
+     }
+     if (!this.encontrado) {
+       this.mensaje = "No existe ningun trabajador con ese DNI";
+     }
+    
   }
     ngOnInit(): void {
   }
