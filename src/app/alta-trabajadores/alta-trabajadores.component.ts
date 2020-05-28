@@ -42,13 +42,15 @@ export class AltaTrabajadoresComponent implements OnInit {
         }
      }
      if (this.existe == true){
-          this.mensaje="Ese trabajador ya está registrado, no puede volver a ser registrado.";
+       this.mensaje = "Ese trabajador ya está registrado, no puede volver a ser registrado.";
+       this.existe = false;
       }else{
         this.fecha2 = new Date(this.fecha);
         this.diasAcumulados = (this.fecha3.getTime() - this.fecha2.getTime()) / (1000 * 60 * 60 * 24);
         this.diasAcumulados = (this.diasAcumulados / 30) * 2.5;
         this.diasAcumulados = Math.ceil(this.diasAcumulados);
-        this.trabajador = new Trabajador(this.nombre, this.dni, this.fecha2, this.diasAcumulados, this.trabajadores[this.trabajadores.length-1].id+1);
+        this.trabajador = new Trabajador(this.nombre, this.dni, this.fecha2, this.diasAcumulados, this.trabajadores[this.trabajadores.length - 1].id + 1);
+        this.trabajadores.push(this.trabajador);
         this.json.addTrabajador(this.trabajador, "http://localhost:3000/trabajadores").subscribe(trabajador => this.trabajadores.push());
          this.mensaje="Trabajador agregado.";
       }
