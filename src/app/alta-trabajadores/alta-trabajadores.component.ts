@@ -13,6 +13,7 @@ export class AltaTrabajadoresComponent implements OnInit {
   fecha: Date;
   fecha2: Date;
   fecha3: Date;
+  existe : boolean = false;
   trabajadores = [];
   diasAcumulados: number;
   trabajador: Trabajador;
@@ -35,15 +36,25 @@ export class AltaTrabajadoresComponent implements OnInit {
   }
 
   agregar(): void {
-    this.fecha2 = new Date(this.fecha);
-    this.diasAcumulados = (this.fecha3.getTime() - this.fecha2.getTime()) / (1000 * 60 * 60 * 24);
-    this.diasAcumulados = (this.diasAcumulados / 30) * 2.5;
-    this.diasAcumulados = Math.ceil(this.diasAcumulados);
-    this.trabajador = new Trabajador(this.nombre, this.dni, this.fecha2, this.diasAcumulados, this.trabajadores[this.trabajadores.length-1].dni+1);
-    this.json.addTrabajador(this.trabajador, "http://localhost:3000/trabajadores").subscribe(trabajador => this.trabajadores.push());
-    if (this.trabajador != null) {
-      this.mostrar();
-    }
+     for (let x = 0; x < this.trabajadores.length; x++){
+        if (this.trabajadores[x].dni == this.dni){
+          this.existe = true;
+        }
+     }
+     if (this.existe == true){
+          alert('Ese trabajador ya está registrado');
+      }else{
+        this.fecha2 = new Date(this.fecha);
+        this.diasAcumulados = (this.fecha3.getTime() - this.fecha2.getTime()) / (1000 * 60 * 60 * 24);
+        this.diasAcumulados = (this.diasAcumulados / 30) * 2.5;
+        this.diasAcumulados = Math.ceil(this.diasAcumulados);
+        this.trabajador = new Trabajador(this.nombre, this.dni, this.fecha2, this.diasAcumulados, this.trabajadores[this.trabajadores.length-1].dni+1);
+        this.json.addTrabajador(this.trabajador, "http://localhost:3000/trabajadores").subscribe(trabajador => this.trabajadores.push());
+        if (this.trabajador != null) {
+          this.mostrar();
+        }
+      }
+
   }
 
   mostrar() {
