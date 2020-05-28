@@ -17,6 +17,7 @@ export class AltaTrabajadoresComponent implements OnInit {
   trabajadores = [];
   diasAcumulados: number;
   trabajador: Trabajador;
+  mensaje: string;
   private headers = new Headers({ 'Content-Type': 'application/json' });
   constructor(public json: TrabajadorServiceService) {
     this.fecha3 = new Date();
@@ -41,7 +42,7 @@ export class AltaTrabajadoresComponent implements OnInit {
         }
      }
      if (this.existe == true){
-          alert('Ese trabajador ya está registrado');
+          this.mensaje="Ese trabajador ya está registrado, no puede volver a ser registrado.";
       }else{
         this.fecha2 = new Date(this.fecha);
         this.diasAcumulados = (this.fecha3.getTime() - this.fecha2.getTime()) / (1000 * 60 * 60 * 24);
@@ -52,19 +53,16 @@ export class AltaTrabajadoresComponent implements OnInit {
         if (this.trabajador != null) {
           this.mostrar();
         }
+         this.mensaje="Trabajador agregado.";
       }
 
   }
 
   mostrar() {
-    if (this.trabajador != null) {
-      return "Trabajador agregado";
-    }
-    //return "" + this.trabajador.nombre + "," + this.trabajador.dni + "," + this.trabajador.getFecha().getFullYear() + ", " + this.trabajador.getDiasAcumulados();
+    return this.mensaje;
   }
 
   ngOnInit(): void {
-    // this.fetchData;
   }
 
 
