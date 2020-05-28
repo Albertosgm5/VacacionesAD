@@ -11,7 +11,9 @@ export class BorrarTrabajadorComponent implements OnInit {
 
  trabajador: Trabajador;
   dni:string;
+  mensaje: string;
   trabajadores = [];
+  existe:boolean = true;
   constructor(public json: TrabajadorServiceService) {
     this.json.getJson('http://localhost:3000/trabajadores').subscribe((res: any) => {
       this.trabajadores = res;
@@ -30,12 +32,19 @@ export class BorrarTrabajadorComponent implements OnInit {
         this.json.deleteTrabajador(this.trabajador, 'http://localhost:3000/trabajadores').subscribe((res: any) => {
           this.trabajador = res;
         })
-         alert('Trabajador borrado correctamente');
+         this.existe=true;
+      }else{
+        this.existe=false;
       }
      }
-      if (this.trabajador.getDni() == "") {
-    alert('No existe el dni de trabajador ingresado');
-    }
+      if (this.existe==false) {
+        this.mensaje='No existe el dni de trabajador ingresado';
+     }else if (this.existe==true){
+       this.mensaje='Trabajador borrado correctamente';
+     }
+  }
+   mostrar() {
+    return this.mensaje;
   }
 
 }
