@@ -13,7 +13,7 @@ export class BorrarTrabajadorComponent implements OnInit {
   dni:string;
   mensaje: string;
   trabajadores = [];
-  existe:boolean = true;
+  existe:boolean = false;
   constructor(public json: TrabajadorServiceService) {
     this.json.getJson('http://localhost:3000/trabajadores').subscribe((res: any) => {
       this.trabajadores = res;
@@ -33,14 +33,13 @@ export class BorrarTrabajadorComponent implements OnInit {
           this.trabajador = res;
         })
          this.existe=true;
-      }else{
-        this.existe=false;
       }
      }
-      if (this.existe==false) {
-        this.mensaje='No existe el dni de trabajador ingresado';
-     }else if (this.existe==true){
-       this.mensaje='Trabajador borrado correctamente';
+     if (this.existe) {
+       this.mensaje = 'Trabajador borrado correctamente';
+       this.existe = false;
+     } else {
+       this.mensaje='No se encontro ningun trabajador con ese DNI';
      }
   }
    mostrar() {
