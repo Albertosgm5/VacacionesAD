@@ -2,15 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\app",
-    "\\src\\app\\alta-trabajadores",
-    "\\src\\app\\bootstrap\\assets",
-    "\\src\\app\\bootstrap\\assets\\dist",
-    "\\src\\app\\bootstrap\\assets\\dist\\css",
-    "\\src\\app\\dias-vacaciones",
-    "\\src\\app\\editar-trabajador",
-    "\\src\\app\\trabajador"
+    "\\src\\app"
   ],
-  "SelectedNode": "\\src\\app\\editar-trabajador\\editar-trabajador.component.html",
+  "SelectedNode": "\\src\\trabajadores.json",
   "PreviewInSolutionExplorer": false
 }

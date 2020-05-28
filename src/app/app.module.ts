@@ -11,6 +11,7 @@ import { TrabajadorComponent } from './trabajador/trabajador.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { TrabajadorServiceService } from './trabajador-service.service';
+import { MostrarComponent } from './mostrar/mostrar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { TrabajadorServiceService } from './trabajador-service.service';
     BuscarTrabajadorComponent,
     BorrarTrabajadorComponent,
     EditarTrabajadorComponent,
-    TrabajadorComponent
+    TrabajadorComponent,
+    MostrarComponent
   ],
   imports: [
     BrowserModule,

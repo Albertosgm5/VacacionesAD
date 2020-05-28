@@ -5,6 +5,7 @@ import { DiasVacacionesComponent } from './dias-vacaciones/dias-vacaciones.compo
 import { BuscarTrabajadorComponent } from './buscar-trabajador/buscar-trabajador.component';
 import { EditarTrabajadorComponent } from './editar-trabajador/editar-trabajador.component';
 import { BorrarTrabajadorComponent } from './borrar-trabajador/borrar-trabajador.component';
+import { MostrarComponent } from './mostrar/mostrar.component';
 
 
 const routes: Routes = [{
@@ -23,6 +24,9 @@ const routes: Routes = [{
   }, {
     path: 'borrar-trabajador',
     component: BorrarTrabajadorComponent
+  }, {
+    path: 'mostrar-trabajadores',
+    component: MostrarComponent
   },];
 
 @NgModule({
