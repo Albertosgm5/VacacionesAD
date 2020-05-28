@@ -1,9 +1,9 @@
 {
   "trabajadores": [
     {
-      "nombre": "regef",
+      "nombre": "Prueba",
       "dni": "Genial",
-      "fecha": "2020-04-30",
+      "fecha": "2020-05-07",
       "diasAcumulados": 0,
       "id": 1
     },

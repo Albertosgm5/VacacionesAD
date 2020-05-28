@@ -9,6 +9,7 @@ import { TrabajadorServiceService } from '../trabajador-service.service'
 })
 export class EditarTrabajadorComponent implements OnInit {
 
+  encontrado: boolean = false;
   fecha: Date;
   trabajador: Trabajador;
   trabajador2: Trabajador;
@@ -32,13 +33,14 @@ export class EditarTrabajadorComponent implements OnInit {
         this.trabajador.fecha = this.fecha;
         console.log(this.trabajador);
         this.json.updateTrabajador(this.trabajador, "http://localhost:3000/trabajadores").subscribe(trabajador => this.trabajador2);
-
+        this.encontrado = true;
       }
     }
-    if (this.trabajador2 != null) {
-      this.mensaje = "Trabajador editado";
+    if (this.encontrado) {
+      this.mensaje = "Se ha editado el trabajador";
+      this.encontrado = false;
     } else {
-      this.mensaje = "No se encontro al trabajador";
+      this.mensaje = "No se encontro ningun trabajador con ese DNI";
     }
   }
     ngOnInit(): void {
