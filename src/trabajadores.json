@@ -15,74 +15,46 @@
       "id": 2
     },
     {
-      "nombre": "ergherge4w",
-      "dni": "546515rg",
-      "fecha": "2019-12-13T00:00:00.000Z",
-      "diasAcumulados": 14,
-      "id": 3
-    },
-    {
-      "nombre": "dfhgreg",
-      "dni": "dfgrwge",
-      "fecha": "2019-06-05T00:00:00.000Z",
-      "diasAcumulados": 30,
-      "id": 4
-    },
-    {
-      "nombre": "fgewge4w",
-      "dni": "rwgewg",
-      "fecha": "2020-05-15T00:00:00.000Z",
-      "diasAcumulados": 2,
-      "id": 5
-    },
-    {
-      "nombre": "gfbndfb",
-      "dni": "dfbefbreb",
-      "fecha": "2020-05-13T00:00:00.000Z",
-      "diasAcumulados": 2,
-      "id": 6
-    },
-    {
       "nombre": "dfbdsv",
       "dni": "sdgewv",
       "fecha": "2020-05-12T00:00:00.000Z",
       "diasAcumulados": 2,
-      "id": 7
+      "id": 3
     },
     {
       "nombre": "aegfef",
       "dni": "fsgbewg",
       "fecha": "2020-03-05T00:00:00.000Z",
       "diasAcumulados": 7,
-      "id": 10
+      "id": 4
     },
     {
       "nombre": "sdfgg",
       "dni": "sdgewg",
       "fecha": "2020-05-06T00:00:00.000Z",
       "diasAcumulados": 2,
-      "id": 11
+      "id": 5
     },
     {
       "nombre": "dfbfb",
       "dni": "srgewg",
       "fecha": "2020-05-09T00:00:00.000Z",
       "diasAcumulados": 2,
-      "id": 12
+      "id": 6
     },
     {
       "nombre": "srger",
       "dni": "dthrg4r",
       "fecha": "2020-05-14T00:00:00.000Z",
       "diasAcumulados": 2,
-      "id": 13
+      "id": 7
     },
     {
       "nombre": "cvbdfb",
       "dni": "fdbgreb",
       "fecha": "2020-05-02T00:00:00.000Z",
       "diasAcumulados": 3,
-      "id": 14
+      "id": 8
     }
   ]
 }
