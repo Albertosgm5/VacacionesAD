@@ -5,9 +5,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { HttpErrorResponse } from '../../node_modules - copia/@angular/common/http';
 import { Http, Response, Headers } from '@angular/http';
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class TrabajadorServiceService {
   [x: string]: any;
   private headers = new Headers({ 'Content-Type': 'application/json' });
@@ -22,7 +20,11 @@ export class TrabajadorServiceService {
   }
 
   updateTrabajador(trabajador: Trabajador, url: string): Observable<Trabajador> {
-    return this.http.put<Trabajador>(url, trabajador);
+    return this.http.put<Trabajador>(url + "/"+trabajador.id, trabajador);
+  }
+
+   deleteTrabajador(trabajador: Trabajador, url: string): Observable<any> {
+    return this.http.delete<Trabajador>(url + "/"+trabajador.id);
   }
 
   private handleError(error: HttpErrorResponse) {

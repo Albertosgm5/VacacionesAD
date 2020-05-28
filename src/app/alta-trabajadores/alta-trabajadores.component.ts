@@ -21,7 +21,6 @@ export class AltaTrabajadoresComponent implements OnInit {
   constructor(public json: TrabajadorServiceService) {
     this.fecha3 = new Date();
     this.json.getJson('http://localhost:3000/trabajadores').subscribe((res: any) => {
-      console.log(res);
       this.trabajadores = res;
       console.log(this.trabajadores);
     })

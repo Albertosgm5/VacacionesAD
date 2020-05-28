@@ -1,9 +1,9 @@
 {
   "trabajadores": [
     {
-      "nombre": "funciona",
+      "nombre": "regef",
       "dni": "Genial",
-      "fecha": "2020-06-11T22:00:00.000Z",
+      "fecha": "2020-04-30",
       "diasAcumulados": 0,
       "id": 1
     },
@@ -48,20 +48,6 @@
       "fecha": "2020-05-12T00:00:00.000Z",
       "diasAcumulados": 2,
       "id": 7
-    },
-    {
-      "nombre": "1",
-      "dni": "1",
-      "fecha": "2020-04-29T00:00:00.000Z",
-      "diasAcumulados": 3,
-      "id": 8
-    },
-    {
-      "nombre": "5",
-      "dni": "5",
-      "fecha": "2020-05-16T00:00:00.000Z",
-      "diasAcumulados": 1,
-      "id": 9
     },
     {
       "nombre": "aegfef",
