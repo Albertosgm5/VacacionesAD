@@ -69,36 +69,6 @@
       "fecha": "2020-03-05T00:00:00.000Z",
       "diasAcumulados": 7,
       "id": 10
-    },
-    {
-      "fecha": null,
-      "diasAcumulados": null,
-      "id": 11
-    },
-    {
-      "fecha": null,
-      "diasAcumulados": null,
-      "id": 12
-    },
-    {
-      "fecha": null,
-      "diasAcumulados": null,
-      "id": 13
-    },
-    {
-      "fecha": null,
-      "diasAcumulados": null,
-      "id": 14
-    },
-    {
-      "fecha": null,
-      "diasAcumulados": null,
-      "id": 15
-    },
-    {
-      "fecha": null,
-      "diasAcumulados": null,
-      "id": 16
     }
   ]
 }
