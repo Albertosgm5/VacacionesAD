@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Trabajador } from '../Trabajador';
+import { TrabajadorServiceService } from '../trabajador-service.service'
 
 @Component({
   selector: 'app-editar-trabajador',
@@ -9,37 +10,42 @@ import { Trabajador } from '../Trabajador';
 export class EditarTrabajadorComponent implements OnInit {
 
   fecha: Date;
- trabajador: Trabajador;
- nombre:string;
- dni:string;
-  trabajadores = [new Trabajador('Juan', '14535346gc', new Date ('2020/05/26'), 0,1), new Trabajador('Albert', '149939929gc', new Date ('2020/05/26'), 0,1)];
-
-  trabajadores2 = [
-             {nombre:'Juan',dni:'14535346gc', fecha:'09/09/1992'},
-               {nombre:'Andres',dni:'14535346b', fecha:'09/09/1992'},
-               {nombre:'Alberto', dni:'564535deF', fecha:'09/09/1992'},
-               {nombre:'Juares', dni:'14535346g', fecha:'09/09/1992'},
-               {nombre:'Juan', dni:'14535346a', fecha:'09/09/1992'}
-              ];
+  trabajador: Trabajador;
+  trabajador2: Trabajador;
+  nombre:string;
+  dni: string;
+  mensaje: string;
+  trabajadores = [];
+  constructor(public json: TrabajadorServiceService) {
+    this.json.getJson('http://localhost:3000/trabajadores').subscribe((res: any) => {
+      this.trabajadores = res;
+      console.log(this.trabajadores);
+    })
+  }
 
   editar() {
     for (let x = 0; x < this.trabajadores.length; x++){
-      if (this.trabajadores[x].getDni() === this.dni)
+      if (this.trabajadores[x].dni === this.dni)
       {
-        this.trabajadores[x].setNombre(this.nombre);
-        this.trabajador.setNombre(this.nombre);
-        this.trabajador.setDni(this.dni);
+        this.trabajador = this.trabajadores[x];
+        this.trabajador.nombre =this.nombre;
+        this.trabajador.fecha = this.fecha;
+        console.log(this.trabajador);
+        this.json.updateTrabajador(this.trabajador, "http://localhost:3000/trabajadores").subscribe(trabajador => this.trabajadores.push());
       }
     }
-    if (this.trabajador.getDni() == "") {
-    alert('No existe el dni del trabajador ingresado');
-  }
+    if (this.trabajador2 != null) {
+      this.mensaje = "Trabajador editado";
+    } else {
+      this.mensaje = "No se encontro al trabajador";
+    }
   }
     ngOnInit(): void {
   }
+
   mostrar() {
   
-    return "" + this.trabajador.getNombre() + "  " + this.trabajador.getDni();
+    return this.mensaje;
 
   }
 

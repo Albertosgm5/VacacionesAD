@@ -4,12 +4,13 @@ import { Trabajador } from './Trabajador';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { HttpErrorResponse } from '../../node_modules - copia/@angular/common/http';
+import { Http, Response, Headers } from '@angular/http';
 @Injectable({
   providedIn: 'root'
 })
 export class TrabajadorServiceService {
   [x: string]: any;
-
+  private headers = new Headers({ 'Content-Type': 'application/json' });
   constructor(private http: HttpClient) { }
 
   getJson(url: string) {
@@ -20,6 +21,9 @@ export class TrabajadorServiceService {
     return this.http.post<Trabajador>(url, trabajador);
   }
 
+  updateTrabajador(trabajador: Trabajador, url: string): Observable<Trabajador> {
+    return this.http.put<Trabajador>(url, trabajador);
+  }
 
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {

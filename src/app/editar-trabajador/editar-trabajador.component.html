@@ -1,6 +1,7 @@
 <div>
-  <p>Ingrese nombre <input type="text" [(ngModel)]="nombre"></p>
-  <p>Ingrese DNI <input type="text" [(ngModel)]="dni"></p>
+  <p>Ingrese DNI del trabajador <input type="text" [(ngModel)]="dni"></p>
+  <p>Ingrese nuevo nombre <input type="text" [(ngModel)]="nombre"></p>
+  <p>Ingrese nueva fecha contratacion <input type="date" [(ngModel)]="fecha"></p>
   <button (click)="editar()"><pre>Editar</pre></button>
   <p>{{mostrar()}}</p>
 </div> 

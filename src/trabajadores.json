@@ -69,34 +69,6 @@
       "fecha": "2020-03-05T00:00:00.000Z",
       "diasAcumulados": 7,
       "id": 10
-    },
-    {
-      "nombre": "d",
-      "dni": "Genial",
-      "fecha": null,
-      "diasAcumulados": null,
-      "id": "fsgbewg1"
-    },
-    {
-      "nombre": "i",
-      "dni": "Genial2",
-      "fecha": null,
-      "diasAcumulados": null,
-      "id": "Genial1"
-    },
-    {
-      "nombre": "e",
-      "dni": "e",
-      "fecha": "2020-04-30T00:00:00.000Z",
-      "diasAcumulados": 3,
-      "id": "Genial21"
-    },
-    {
-      "nombre": "3",
-      "dni": "Genial",
-      "fecha": null,
-      "diasAcumulados": null,
-      "id": "e1"
     }
   ]
 }
