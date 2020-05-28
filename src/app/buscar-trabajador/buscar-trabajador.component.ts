@@ -35,11 +35,13 @@ export class BuscarTrabajadorComponent implements OnInit {
       {
         this.trabajador = this.trabajadores[x];
         this.encontrado = true;
-        this.mensaje = "Nombre: " + this.trabajador.nombre + ", DNI: " + this.trabajador.dni + ", Contratacion: " + this.trabajador.fecha + ", Dias Acumulados: " + this.trabajador.diasAcumulados;
       }
      }
-     if (!this.encontrado) {
-       this.mensaje = "No existe ningun trabajador con ese DNI!"
+     if (this.encontrado) {
+       this.mensaje = "Nombre: " + this.trabajador.nombre + ", DNI: " + this.trabajador.dni + ", Contratacion: " + this.trabajador.fecha + ", Dias Acumulados: " + this.trabajador.diasAcumulados;
+       this.encontrado = false;
+     } else {
+       this.mensaje = "No se encontro ningun trabajador con ese DNI"
      }
    }
 }

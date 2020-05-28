@@ -2,59 +2,45 @@
   "trabajadores": [
     {
       "nombre": "Prueba",
-      "dni": "Genial",
+      "dni": "58657225F",
       "fecha": "2020-05-07",
       "diasAcumulados": 0,
       "id": 1
     },
     {
       "nombre": "funciona",
-      "dni": "Genial2",
+      "dni": "85625778B",
       "fecha": "2020-06-11T22:00:00.000Z",
       "diasAcumulados": 0,
       "id": 2
     },
     {
       "nombre": "Prueba2",
-      "dni": "sdgewv",
+      "dni": "74586223J",
       "fecha": "2020-05-07",
       "diasAcumulados": 1,
       "id": 3
     },
     {
       "nombre": "aegfef",
-      "dni": "fsgbewg",
+      "dni": "956325854E",
       "fecha": "2020-03-05T00:00:00.000Z",
       "diasAcumulados": 7,
       "id": 4
     },
     {
       "nombre": "sdfgg",
-      "dni": "sdgewg",
+      "dni": "84659338H",
       "fecha": "2020-05-06T00:00:00.000Z",
       "diasAcumulados": 2,
       "id": 5
     },
     {
       "nombre": "dfbfb",
-      "dni": "srgewg",
+      "dni": "65856224P",
       "fecha": "2020-05-09T00:00:00.000Z",
       "diasAcumulados": 2,
       "id": 6
-    },
-    {
-      "nombre": "srger",
-      "dni": "dthrg4r",
-      "fecha": "2020-05-14T00:00:00.000Z",
-      "diasAcumulados": 2,
-      "id": 7
-    },
-    {
-      "nombre": "cvbdfb",
-      "dni": "fdbgreb",
-      "fecha": "2020-05-02T00:00:00.000Z",
-      "diasAcumulados": 3,
-      "id": 8
     }
   ]
 }
