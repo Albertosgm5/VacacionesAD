@@ -69,6 +69,34 @@
       "fecha": "2020-03-05T00:00:00.000Z",
       "diasAcumulados": 7,
       "id": 10
+    },
+    {
+      "nombre": "sdfgg",
+      "dni": "sdgewg",
+      "fecha": "2020-05-06T00:00:00.000Z",
+      "diasAcumulados": 2,
+      "id": 11
+    },
+    {
+      "nombre": "dfbfb",
+      "dni": "srgewg",
+      "fecha": "2020-05-09T00:00:00.000Z",
+      "diasAcumulados": 2,
+      "id": 12
+    },
+    {
+      "nombre": "srger",
+      "dni": "dthrg4r",
+      "fecha": "2020-05-14T00:00:00.000Z",
+      "diasAcumulados": 2,
+      "id": 13
+    },
+    {
+      "nombre": "cvbdfb",
+      "dni": "fdbgreb",
+      "fecha": "2020-05-02T00:00:00.000Z",
+      "diasAcumulados": 3,
+      "id": 14
     }
   ]
 }
