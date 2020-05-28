@@ -39,7 +39,7 @@ export class AltaTrabajadoresComponent implements OnInit {
     this.diasAcumulados = (this.fecha3.getTime() - this.fecha2.getTime()) / (1000 * 60 * 60 * 24);
     this.diasAcumulados = (this.diasAcumulados / 30) * 2.5;
     this.diasAcumulados = Math.ceil(this.diasAcumulados);
-    this.trabajador = new Trabajador(this.nombre, this.dni, this.fecha2, this.diasAcumulados);
+    this.trabajador = new Trabajador(this.nombre, this.dni, this.fecha2, this.diasAcumulados, this.trabajadores[this.trabajadores.length-1].dni+1);
     this.json.addTrabajador(this.trabajador, "http://localhost:3000/trabajadores").subscribe(trabajador => this.trabajadores.push());
     if (this.trabajador != null) {
       this.mostrar();
